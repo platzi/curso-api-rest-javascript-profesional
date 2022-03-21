@@ -1,3 +1,4 @@
+let maxPage;
 let page = 1;
 let infiniteScroll;
 
