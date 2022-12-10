@@ -144,7 +144,7 @@ async function getTrendingMoviesPreview() {
   const movies = data.results;
   console.log(movies);
 
-  createMovies(movies, trendingMoviesPreviewList, true);
+  createMovies(movies, trendingMoviesPreviewList, { lazyLoad: true });
 }
 
 async function getCategegoriesPreview() {
