@@ -1,24 +1,26 @@
 /* General */
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 :root {
-  --purple-light-1: #FBFAFB;
-  --purple-light-2: #EEEAF2;
-  --purple-medium-1: #AA83C8;
-  --purple-medium-2: #8B48BF;
-  --purple-medium-3: #5C218A;
-  --purple-dark-1: #3E0F64;
-  --purple-dark-2: #2A0646;
+  --purple-light-1: #fbfafb;
+  --purple-light-2: #eeeaf2;
+  --purple-medium-1: #aa83c8;
+  --purple-medium-2: #8b48bf;
+  --purple-medium-3: #5c218a;
+  --purple-dark-1: #3e0f64;
+  --purple-dark-2: #2a0646;
 
-  --yellow: #EECC75;
-  --green: #CAD297;
-  --aqua: #B7EAC5;
-  --lightBlue: #A2EEE5;
-  --darkBlue: #8EA2EA;
-  --red: #F09D9D;
+  --yellow: #eecc75;
+  --green: #cad297;
+  --aqua: #b7eac5;
+  --lightBlue: #a2eee5;
+  --darkBlue: #8ea2ea;
+  --red: #f09d9d;
 
-  --font-family-titles: 'Dosis', sans-serif;
-  --font-family-text: 'Red Hat Display', sans-serif;
+  --font-family-titles: "Dosis", sans-serif;
+  --font-family-text: "Red Hat Display", sans-serif;
   --font-weight-title1: 800;
   --font-weight-title2: 700;
   --font-weight-text1: 400;
@@ -39,12 +41,15 @@ body {
   padding: 0;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
   padding: 0;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: 24px;
   color: var(--purple-dark-2);
   font-family: var(--font-family-titles);
@@ -87,17 +92,24 @@ button {
   cursor: pointer;
 }
 
-
 /* Shared */
-.header-container, .trendingPreview-header, .categoriesPreview-container, .liked-header {
+.header-container,
+.trendingPreview-header,
+.categoriesPreview-container,
+.liked-header {
   padding: 0 24px;
 }
 
-.trendingPreview-container, .categoriesPreview-container, .liked-container, footer {
+.trendingPreview-container,
+.categoriesPreview-container,
+.liked-container,
+footer {
   margin-top: 48px;
 }
 
-.trendingPreview-header, .categoriesPreview-title, .liked-header {
+.trendingPreview-header,
+.categoriesPreview-title,
+.liked-header {
   margin-bottom: 24px;
 }
 
@@ -118,10 +130,10 @@ button {
   animation: loading-skeleton infinite 1.5s;
 }
 .movie-container--loading:nth-child(2) {
-  animation-delay: .2s;
+  animation-delay: 0.2s;
 }
 .movie-container--loading:nth-child(3) {
-  animation-delay: .4s;
+  animation-delay: 0.4s;
 }
 
 .movie-img {
@@ -140,7 +152,7 @@ button {
   margin: 0;
 }
 .movie-btn::before {
-  content: '🤍';
+  content: "🤍";
   /* font-size: 13px; */
 }
 .movie-btn--liked {
@@ -148,10 +160,11 @@ button {
   box-shadow: 0px 0px 10px 2px var(--purple-dark-1);
 }
 .movie-btn--liked::before {
-  content: '💜';
+  content: "💜";
 }
 
-.categoriesPreview-list, .categories-list {
+.categoriesPreview-list,
+.categories-list {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -172,9 +185,8 @@ button {
   animation: loading-skeleton infinite 1.5s;
 }
 .category-container--loading:nth-child(2) {
-  animation-delay: .2s;
+  animation-delay: 0.2s;
 }
-
 
 /* Header */
 .header-container {
@@ -182,8 +194,13 @@ button {
 }
 
 .header-container--long {
-  background-image: url('https://pics.filmaffinity.com/Deadpool-777527803-large.jpg');
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 19.27%, rgba(0, 0, 0, 0) 29.17%), url(https://pics.filmaffinity.com/Deadpool-777527803-large.jpg);
+  background-image: url("https://pics.filmaffinity.com/Deadpool-777527803-large.jpg");
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.35) 19.27%,
+      rgba(0, 0, 0, 0) 29.17%
+    ),
+    url(https://pics.filmaffinity.com/Deadpool-777527803-large.jpg);
   background-size: cover !important;
   height: 480px;
   position: fixed;
@@ -192,8 +209,12 @@ button {
 }
 
 .header-container--categoryView {
-  background: linear-gradient(180deg, rgba(238, 204, 117, 0.5) 0%, rgba(238, 204, 117, 0) 72.92%);
-} 
+  background: linear-gradient(
+    180deg,
+    rgba(238, 204, 117, 0.5) 0%,
+    rgba(238, 204, 117, 0) 72.92%
+  );
+}
 
 .header-title {
   margin-bottom: 16px;
@@ -231,7 +252,6 @@ button {
   border-bottom-right-radius: 8px;
 }
 
-
 /* Trending */
 .trendingPreview-header,
 .liked-header {
@@ -256,6 +276,22 @@ button {
   padding-bottom: 16px;
 }
 
+.trendingPreview-movieList::-webkit-scrollbar,
+.liked-movieList::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+.trendingPreview-movieList::-webkit-scrollbar-thumb,
+.liked-movieList::-webkit-scrollbar-thumb {
+  background: var(--purple-medium-1);
+  border-radius: 4px;
+}
+.trendingPreview-movieList::-webkit-scrollbar-thumb:hover,
+.liked-movieList::-webkit-scrollbar-thumb:hover {
+  background: var(--purple-medium-3);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
 .trendingPreview-movieList .movie-container,
 .liked-movieList .movie-container {
   display: inline-block;
@@ -272,7 +308,6 @@ button {
   max-width: 150px;
 }
 
-
 /* Categories */
 .category-container {
   width: 45%;
@@ -287,7 +322,7 @@ button {
 }
 
 .category-title::before {
-  content: '••••';
+  content: "••••";
   color: transparent;
   /* TODO: cambiar color por ID de la categoría */
   background-color: var(--idColor);
@@ -296,26 +331,63 @@ button {
   width: 8px;
   height: 8px;
 }
-#id28 { --idColor: var(--yellow); }
-#id12 { --idColor: var(--red); }
-#id16 { --idColor: var(--green); }
-#id35 { --idColor: var(--lightBlue); }
-#id80 { --idColor: var(--darkBlue); }
-#id99 { --idColor: var(--purple-dark-1); }
-#id18 { --idColor: var(--purple-medium-1); }
-#id10751 { --idColor: var(--yellow); }
-#id14 { --idColor: var(--red); }
-#id36 { --idColor: var(--green); }
-#id27 { --idColor: var(--lightBlue); }
-#id10402 { --idColor: var(--darkBlue); }
-#id9648 { --idColor: var(--purple-dark-1); }
-#id10749 { --idColor: var(--purple-medium-1); }
-#id878 { --idColor: var(--yellow); }
-#id10770 { --idColor: var(--red); }
-#id53 { --idColor: var(--green); }
-#id10752 { --idColor: var(--lightBlue); }
-#id37 { --idColor: var(--darkBlue); }
-
+#id28 {
+  --idColor: var(--yellow);
+}
+#id12 {
+  --idColor: var(--red);
+}
+#id16 {
+  --idColor: var(--green);
+}
+#id35 {
+  --idColor: var(--lightBlue);
+}
+#id80 {
+  --idColor: var(--darkBlue);
+}
+#id99 {
+  --idColor: var(--purple-dark-1);
+}
+#id18 {
+  --idColor: var(--purple-medium-1);
+}
+#id10751 {
+  --idColor: var(--yellow);
+}
+#id14 {
+  --idColor: var(--red);
+}
+#id36 {
+  --idColor: var(--green);
+}
+#id27 {
+  --idColor: var(--lightBlue);
+}
+#id10402 {
+  --idColor: var(--darkBlue);
+}
+#id9648 {
+  --idColor: var(--purple-dark-1);
+}
+#id10749 {
+  --idColor: var(--purple-medium-1);
+}
+#id878 {
+  --idColor: var(--yellow);
+}
+#id10770 {
+  --idColor: var(--red);
+}
+#id53 {
+  --idColor: var(--green);
+}
+#id10752 {
+  --idColor: var(--lightBlue);
+}
+#id37 {
+  --idColor: var(--darkBlue);
+}
 
 /* Generic List (search, trending & category) */
 .genericList-container {
@@ -334,7 +406,6 @@ button {
 .genericList-container .movie-img {
   width: 100%;
 }
-
 
 /* Movie Detail */
 .movieDetail-container {
@@ -361,7 +432,7 @@ button {
   font-weight: var(--font-weight-title2);
 }
 .movieDetail-score::before {
-  content: '★';
+  content: "★";
   color: var(--yellow);
   padding-right: 4px;
 }
@@ -411,7 +482,6 @@ button {
   min-height: 187.5px;
   max-height: 187.5px;
 }
-  
 
 /* Footer */
 footer {
@@ -424,16 +494,15 @@ footer {
   align-items: center;
 }
 
-
 /* Navigation */
 .inactive {
   display: none;
 }
 
-
 /* Animations */
 @keyframes loading-skeleton {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 100%;
   }
   50% {
