@@ -276,12 +276,21 @@ footer {
   padding-bottom: 16px;
 }
 
-.trendingPreview-movieList::-webkit-scrollbar {
-  display: none;
+.trendingPreview-movieList::-webkit-scrollbar,
+.liked-movieList::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
 }
-/* .liked-movieList::-webkit-scrollbar {
-  display: none;
-} */
+.trendingPreview-movieList::-webkit-scrollbar-thumb,
+.liked-movieList::-webkit-scrollbar-thumb {
+  background: var(--purple-medium-1);
+  border-radius: 4px;
+}
+.trendingPreview-movieList::-webkit-scrollbar-thumb:hover,
+.liked-movieList::-webkit-scrollbar-thumb:hover {
+  background: var(--purple-medium-3);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
 
 .trendingPreview-movieList .movie-container,
 .liked-movieList .movie-container {
